@@ -1,0 +1,30 @@
+<div class="table-container">
+    <table class="table table-striped table-hover table-responsive">
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Billing Street</th>
+                <th>Billing City</th>
+                <th>Billing State</th>
+                <th>Billing Zip</th>
+                <th>Billing Country</th>
+                <th>Website</th>
+                <th>Phone Number</th>
+                <th>Industry</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let company of companies" (click)="onClickCompany(company)">
+                <td>{{ company.name }}</td>
+                <td>{{ company.billingStreet }}</td>
+                <td>{{ company.billingCity }}</td>
+                <td>{{ company.billingState }}</td>
+                <td>{{ company.billingZip }}</td>
+                <td>{{ company.billingCountry }}</td>
+                <td>{{ company.website }}</td>
+                <td>{{ company.phoneNumber }}</td>
+                <td>{{ company.industry }}</td>
+            </tr>
+        </tbody>
+    </table>
+</div>

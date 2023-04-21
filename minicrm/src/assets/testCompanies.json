@@ -1,0 +1,30 @@
+[
+    {
+        "_id": "642062eedffc55b7a7188beb",
+        "name": "Amazon.com Inc.",
+        "billingStreet": "410 Terry Ave. North",
+        "billingCity": "Seattle",
+        "billingState": "WA",
+        "billingZip": "98109-5210",
+        "billingCountry": "USA",
+        "website": "https://www.amazon.com/",
+        "phoneNumber": "1-206-266-1000",
+        "industry": "Technology",
+        "persons": [],
+        "__v": 0
+    },
+    {
+        "_id": "64206319dffc55b7a7188bf0",
+        "name": "Microsoft Corporation",
+        "billingStreet": "One Microsoft Way",
+        "billingCity": "Redmond",
+        "billingState": "WA",
+        "billingZip": "98052-6399",
+        "billingCountry": "USA",
+        "website": "https://www.microsoft.com/",
+        "phoneNumber": "1-425-882-8080",
+        "industry": "Technology",
+        "persons": [],
+        "__v": 0
+    }
+]

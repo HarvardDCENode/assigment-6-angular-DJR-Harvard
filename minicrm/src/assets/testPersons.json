@@ -1,0 +1,21 @@
+[
+    {
+        "_id": "642063dddffc55b7a7188c1e",
+        "firstName": "Andy",
+        "lastName": "Jassy Updated",
+        "email": "andy@test.com",
+        "phoneNumber": "6666666",
+        "company": "642062eedffc55b7a7188beb",
+        "__v": 0,
+        "createdAt": "2023-04-12T16:15:28.038Z"
+    },
+    {
+        "_id": "642063f2dffc55b7a7188c27",
+        "firstName": "Satya",
+        "lastName": "Nadella",
+        "email": "Satya@test.com",
+        "phoneNumber": "7777777",
+        "company": "64206319dffc55b7a7188bf0",
+        "__v": 0
+    }
+]
