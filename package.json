@@ -1,0 +1,6 @@
+{
+  "installDependencies": true,
+  "stackblitz": {
+    "startCommand": "npm start"
+  }
+}
