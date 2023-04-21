@@ -19,6 +19,13 @@ export class DataService {
     return company || null;
   }
 
+  getPersonsByCompanyId(id: string): Person[] {
+    const companyPersons = persons.filter(p => String(p.company) === id);
+    return companyPersons;
+  }
+  
+
+
   getPersons(): Person[] {
     return persons;
   }

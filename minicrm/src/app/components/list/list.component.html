@@ -15,7 +15,7 @@
         </thead>
         <tbody>
             <tr *ngFor="let company of companies" (click)="onClickCompany(company)">
-                <td>{{ company.name }}</td>
+                <td><a href="#" (click)="onClick($event)">{{ company.name }}</a></td>
                 <td>{{ company.billingStreet }}</td>
                 <td>{{ company.billingCity }}</td>
                 <td>{{ company.billingState }}</td>

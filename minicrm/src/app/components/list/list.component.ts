@@ -1,6 +1,7 @@
-import { Component, EventEmitter, Output } from '@angular/core';
+import { Component } from '@angular/core';
 import { DataService } from '../../services/data.service';
 import { Company, Person } from '../../models/models';
+import { RecordSelectService } from '../../services/selectEvent.service';
 
 
 @Component({
@@ -13,10 +14,7 @@ export class ListComponent {
   persons: Person[] = [];
   loading = true;
 
-  @Output() companyClicked = new EventEmitter<{ type: string, recordId: string }>();
-
-  
-  constructor(private dataService: DataService) { 
+  constructor(private dataService: DataService, private recordSelectService: RecordSelectService) {
     this.fetchData();
   }
 
@@ -29,7 +27,11 @@ export class ListComponent {
   onClickCompany(company: Company) {
     const recordId = company._id;
     const type = 'Company';
-    this.companyClicked.emit({ type, recordId });
+    this.recordSelectService.eventEmitter.emit({ type, recordId });
+  }
+
+  onClick(event: MouseEvent) {
+    event.preventDefault();
   }
   
 }
