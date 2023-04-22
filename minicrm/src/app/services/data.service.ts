@@ -1,3 +1,7 @@
+/** David Rasmussen HW6 4/22/2023
+ *  data service to get company and person records.
+ *  future: add functions for all CRUD operations.
+ */
 import { Injectable } from '@angular/core';
 import companies from '../../assets/testCompanies.json';
 import persons from '../../assets/testPersons.json';
@@ -23,8 +27,6 @@ export class DataService {
     const companyPersons = persons.filter(p => String(p.company) === id);
     return companyPersons;
   }
-  
-
 
   getPersons(): Person[] {
     return persons;

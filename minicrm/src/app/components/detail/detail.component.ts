@@ -1,3 +1,7 @@
+/** David Rasmussen HW6 4/22/2023
+ * detail.component shows the details of a selected record
+ * and an array of child records.
+ */
 import { Component, OnInit } from '@angular/core';
 import { RecordSelectService } from '../../services/selectEvent.service';
 import { DataService } from '../../services/data.service';
@@ -8,8 +12,9 @@ import { DataService } from '../../services/data.service';
   styleUrls: ['./detail.component.css']
 })
 export class DetailComponent implements OnInit {
-  record: any | null = null;
-  persons: any | null = null;
+  record: any | null = null;  //to be reusable for other types of records
+  children: any | null = null;
+  type: string = 'Company';
 
   constructor(
     private recordSelectService: RecordSelectService,
@@ -20,10 +25,12 @@ export class DetailComponent implements OnInit {
     this.recordSelectService.eventEmitter.subscribe((event) => {
       // Access the recordId and type properties from the event
       const recordId = event.recordId;
-      const type = event.type;
+      //type holds the record type, e.g. Company, Person, etc.
+      //for future use case ideas.
+      this.type = event.type;
 
       this.record = this.dataService.getCompany(recordId);
-      this.persons = this.dataService.getPersonsByCompanyId(recordId);
+      this.children = this.dataService.getPersonsByCompanyId(recordId);
 
     });
   }

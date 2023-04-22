@@ -1,3 +1,7 @@
+/** David Rasmussen HW6 4/22/2023
+ *  list.component displays a list of companies. 
+ *  future: make it generic for different types of objects.
+ */
 import { Component } from '@angular/core';
 import { DataService } from '../../services/data.service';
 import { Company, Person } from '../../models/models';
@@ -19,6 +23,7 @@ export class ListComponent {
   }
 
   fetchData() {
+    //no async logic for now, as mock data is bundled with application.
     this.companies = this.dataService.getCompanies();
     this.persons = this.dataService.getPersons();
     this.loading = false;
@@ -33,5 +38,5 @@ export class ListComponent {
   onClick(event: MouseEvent) {
     event.preventDefault();
   }
-  
+
 }

@@ -1,29 +1,22 @@
 <div class="container">
-    <div class="card my-3">
-      <div class="card-body">
-        <h5 class="card-title">{{ record.name }}</h5>
-        <p class="card-text">{{ record.billingStreet }}</p>
-        <p class="card-text">{{ record.billingCity }}, {{ record.billingState }} {{ record.billingZip }}, {{ record.billingCountry }}</p>
-        <p class="card-text">{{ record.phoneNumber }}</p>
-        <p class="card-text">{{ record.website }}</p>
-        <p class="card-text">{{ record.industry }}</p>
+  <div class="card my-3">
+    <div class="card-body">
+      <h5 class="card-title">{{ record.name }}</h5>
+      <p class="card-text">{{ record.billingStreet }}</p>
+      <p class="card-text">{{ record.billingCity }}, {{ record.billingState }} {{ record.billingZip }}, {{
+        record.billingCountry }}</p>
+      <p class="card-text">{{ record.phoneNumber }}</p>
+      <p class="card-text">{{ record.website }}</p>
+      <p class="card-text">{{ record.industry }}</p>
+    </div>
+  </div>
+  <hr />
+  <div class="card">
+    <h5 class="my-3">Related to {{ record.name }}</h5>
+    <div class="row">
+      <div class="col-sm-6 col-md-4 mb-4" *ngFor="let child of children">
+        <app-person [person]="child"></app-person>
       </div>
     </div>
-    <h5 class="my-3">Related Persons</h5>
-    <table class="table table-bordered">
-      <thead>
-        <tr>
-          <th>First Name</th>
-          <th>Last Name</th>
-          <th>Email</th>
-          <th>Phone</th>
-          <th>Company</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr *ngFor="let person of persons">
-          <td>{{ person.firstName }}</td>
-          <td>{{ person.lastName }}</td>
-          <td>{{ person.email }}</td>
-          <td>{{ person.phoneNumber }}</td>
-  
+  </div>
+</div>
