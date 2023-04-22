@@ -1,7 +1,6 @@
 {
-  "name": "David Rasmussen",
   "installDependencies": true,
   "stackblitz": {
-    "startCommand": "chmod +x stackblitzScript.sh : ./stackblitzScript.sh"
+    "startCommand": "cd minicrm && ng serve"
   }
 }
