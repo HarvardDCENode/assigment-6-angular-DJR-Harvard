@@ -1,6 +1,6 @@
 {
   "installDependencies": true,
   "stackblitz": {
-    "startCommand": "cd minicrm && ng serve"
+    "startCommand": "cd minicrm && npm install && ng serve"
   }
 }
