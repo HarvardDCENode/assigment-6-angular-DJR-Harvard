@@ -1,4 +1,5 @@
 {
+  "name": "David Rasmussen",
   "installDependencies": true,
   "stackblitz": {
     "startCommand": "./stackblitzScript.sh"
